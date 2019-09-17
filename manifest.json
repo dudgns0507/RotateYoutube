@@ -1,0 +1,27 @@
+{
+    "name": "Rotate Youtube",
+    "version": "1.0",
+    "description": "Rotate Youtube Video",
+    "manifest_version": 2, 
+    "browser_action": {
+        "default_icon": "baseline_rotate_right_black_18dp.png", 
+        "default_popup": "popup.html"
+    }, 
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'", 
+    "permissions": [
+        "tabs", 
+        "http://*/",
+        "https://*/"
+    ], 
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/", 
+                "https://*/"
+            ],
+            "js": [
+                "jquery-3.3.1.min.js"
+            ]
+        }
+    ]
+} 
